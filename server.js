@@ -167,7 +167,7 @@ app.put("/stocksupdate/:id", async (req, res) => {
       { $inc: { stock: stocksto } },
       { new: true },
     );
-    if (!updatedProduct) {
+    if (!adstocks) {
       return res.status(404).json({ message: "Product not found" });
     }
 
