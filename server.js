@@ -5,7 +5,11 @@ const bcrypt = require("bcrypt");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://inventrymanagementj.netlify.app/",
+  }),
+);
 app.use(express.json());
 
 // const hostname = "127.0.0.1";
