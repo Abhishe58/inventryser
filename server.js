@@ -7,8 +7,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://inventrymanagementj.netlify.app/",
-    methods: ["GET", "POST"],
+    origin: "https://inventrymanagementj.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
