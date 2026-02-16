@@ -8,8 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const hostname = "127.0.0.1";
-const port = 5000;
+// const hostname = "127.0.0.1";
+// const port = 5000;
+const port = process.env.PORT || 5000;
 
 const mongooDB = async () => {
   try {
@@ -208,6 +209,9 @@ app.delete("/deletePro/:id", async (req, res) => {
   }
 });
 
-app.listen(port, hostname, () => {
-  console.log(`http://${hostname}:${port}`);
+// app.listen(port, hostname, () => {
+//   console.log(`http://${hostname}:${port}`);
+// });
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
