@@ -8,8 +8,11 @@ const app = express();
 app.use(
   cors({
     origin: "https://inventrymanagementj.netlify.app/",
+    methods: ["GET", "POST"],
+    credentials: true,
   }),
 );
+
 app.use(express.json());
 
 // const hostname = "127.0.0.1";
